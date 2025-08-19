@@ -72,9 +72,9 @@ docker build -t nestjs-hw:latest --platform linux/amd64 .
 # login docker into aws ecr
 aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 643763539091.dkr.ecr.us-east-1.amazonaws.com
 # tag created image with ecr
-docker tag nestjs-hw:latest 643763539091.dkr.ecr.us-east-1.amazonaws.com/cdk-hnb659fds-container-assets-643763539091-us-east-1:latest
+docker tag nestjs-hw:latest 643763539091.dkr.ecr.us-east-1.amazonaws.com/<repository_name>/nestjs-hw:latest
 # push image to aws ecr
-docker push 643763539091.dkr.ecr.us-east-1.amazonaws.com/cdk-hnb659fds-container-assets-643763539091-us-east-1:latest
+docker push 643763539091.dkr.ecr.us-east-1.amazonaws.com/<repository_name>/nestjs-hw:latest
 ```
 
 With Mau, you can deploy your application in just a few clicks, allowing you to focus on building features rather than managing infrastructure.
