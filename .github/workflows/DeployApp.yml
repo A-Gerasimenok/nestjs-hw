@@ -5,9 +5,8 @@ on:
 
 env:
   # Setting an environment variable with the value of a configuration variable
-  ECR_IMAGE: ${{ vars.ECR_IMAGE }}
+  ECR_IMAGE: ${{ secrets.ECR_IMAGE }}
   AWS_DEFAULT_REGION: ${{ vars.AWS_DEFAULT_REGION }}
-  AWS_ECR_NAME: ${{ secrets.AWS_ECR_NAME }}
 jobs:
   deploy:
     runs-on: ubuntu-latest
