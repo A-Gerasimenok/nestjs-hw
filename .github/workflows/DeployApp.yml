@@ -3,10 +3,6 @@ name: Build and Deploy nestjs-hw to ECS
 on:
   workflow_dispatch:
 
-env:
-  # Setting an environment variable with the value of a configuration variable
-  ECR_IMAGE: ${{ secrets.ECR_IMAGE }}
-  AWS_DEFAULT_REGION: ${{ vars.AWS_DEFAULT_REGION }}
 jobs:
   deploy:
     runs-on: ubuntu-latest
